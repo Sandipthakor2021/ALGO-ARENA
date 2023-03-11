@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algo Arena</title>
+    <link rel="stylesheet" href="main.css">
+    <style>
+        .navbar li{
+            position: relative;
+        }
+        .navbar li a{
+            color: #1a1a1a;
+            transition: 0.3s ease;
+        }
+        .navbar li a:hover,
+        .navbar li a.active{
+            color: #088178 ;
+        }
+        .navbar li a.active::after,
+        .navbar li a:hover::after{
+            content: "";
+            width: 100%;
+            height: 2px;
+            background: #088178;
+            position: absolute;
+            bottom: -4px;
+            left: 0px;
+        }
+        table{
+            border-collapse: collapse;
+            width: 50%;
+        }
+        th,td{
+            border: 2px solid green;   
+            padding: 15px;  
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="">
+        <div class="max-w-[1200px] mx-auto h-full">
+            <div class="flex flex-row gap-2 max-w-[1172] mx-auto mt-4">
+                <a class="text-green-800 text-4xl ml-2 mt-2 font-bold" href="/">ALGO ARENA</a>
+                <img src="./logo.jpeg" height="50px" width="60px" alt="" style="vertical-align: middle;">
+              </div>
+
+              <div class="flex flex-row justify-center gap-8 rounded-md mt-5 border">
+                <a class="font-bold text-indigo-500 hover:text-red-600" href="/problemset.html">PROBLEMS</a>
+                <a class="font-bold text-indigo-500 hover:text-red-600" href="http://127.0.0.1:8000/">SUBMIT</a>
+            </div>
+
+            <div class="mt-4 max-w-[850px] mx-auto">
+                <div class="flex flex-col">
+                 <br>   <h1 class="text-4xl font-bold text-center" style="font-family: 'Courier New', monospace;">Distinct Pair Sums</h1> <br>
+                    <p class="text-lg">You are given a range of integers {L,L+1,…,R}. An integer X is said to be reachable if it can be represented as a sum of two not necessarily distinct integers in this range. Find the number of distinct reachable integers.</p>
+                </div>
+                <div class="mt-3">
+                    <h1 class="font-semibold text-xl">Input Format</h1>
+                    <ul class="list-disc mt-2 ml-5 text-lg">
+                        <li>First line of input contains T, the number of test cases. The description of T test cases follow.</li>
+                        <li>The first and only line of each test case contains two space-separated integers L and R.</li>
+                    </ul>
+                </div>
+                <div class="mt-3 text-xl">
+                    <h1 class="font-semibold">Output Format</h1>
+                    <p class="textlg">For each testcase, print a single line containing one integer - the number of reachable integers.</p>
+
+                </div>
+                <div class="mt-3">
+                    <h1 class="text-xl font-semibold">Constraints</h1>
+                    <ul class="list-disc ml-5 text-lg">
+                        <li>1 ≤ T ≤ 10<sup>5</sup></li>
+                        <li>1 ≤ L ≤ R ≤ 10<sup>6</sup></li>
+                        <li>The sum of N over all test cases does not exceed 2*10<sup>5</sup></li>
+                    </ul>
+                </div>
+                <h1 class="mt-3 text-xl font-semibold">Sample 1:</h1>
+                <table>
+                    <tr>
+                        <th>Input</th>
+                        <th>Output</th>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>2 2</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>2 3</td>
+                        <td></td>
+                    </tr>
+                </table>
+                <div class="mt-3">
+                    <h1 class="text-xl font-semibold">Explanation:</h1>
+                    <p class="text-lg">Example case 1: The only reachable integer is 2+2=4.</p>
+                    <p class="text-lg">Example case 2: 4, 5 and 6 are reachable, since 2+2=4, 2+3=5 and 3+3=6.</p>
+                </div>
+                <div class="mt-3">
+                    <table>
+                        <tr>
+                            <th>Accepted</th>
+                            <th>Submissions</th>
+                            <th>Accuracy</th>
+                        </tr>
+                        <tr>
+                            <td>3367</td>
+                            <td>6817</td>
+                            <td>53.44</td>
+                        </tr>
+                    </table>
+                </div>
+
+            </div>
+            
+
+
+
+            <div class="text-center mt-10 text-lg font-bold text-amber-600">
+                © 2023 ALGO ARENA
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html>

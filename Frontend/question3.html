@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algo Arena</title>
+    <link rel="stylesheet" href="main.css">
+    <style>
+        .navbar li{
+            position: relative;
+        }
+        .navbar li a{
+            color: #1a1a1a;
+            transition: 0.3s ease;
+        }
+        .navbar li a:hover,
+        .navbar li a.active{
+            color: #088178 ;
+        }
+        .navbar li a.active::after,
+        .navbar li a:hover::after{
+            content: "";
+            width: 100%;
+            height: 2px;
+            background: #088178;
+            position: absolute;
+            bottom: -4px;
+            left: 0px;
+        }
+        table{
+            border-collapse: collapse;
+            width: 50%;
+        }
+        th,td{
+            border: 2px solid green;   
+            padding: 15px;  
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="">
+        <div class="max-w-[1200px] mx-auto h-full">
+            <div class="flex flex-row gap-2 max-w-[1172] mx-auto mt-4">
+                <a class="text-green-800 text-4xl ml-2 mt-2 font-bold" href="/">ALGO ARENA</a>
+                <img src="./logo.jpeg" height="50px" width="60px" alt="" style="vertical-align: middle;">
+              </div>
+
+              <div class="flex flex-row justify-center gap-8 rounded-md mt-5 border">
+                <a class="font-bold text-indigo-500 hover:text-red-600" href="/problemset.html">PROBLEMS</a>
+                <a class="font-bold text-indigo-500 hover:text-red-600" href="http://127.0.0.1:8000/">SUBMIT</a>
+            </div>
+
+            <div class="mt-4 max-w-[850px] mx-auto">
+                <div class="flex flex-col">
+                  <br>  <h1 class="text-4xl font-bold text-center" style="font-family: 'Courier New', monospace;">Minimum Number of Pizzas</h1> <br>
+                    <p class="text-lg">Ram is throwing a party for his N friends. There is a pizza store nearby and he wants to buy pizza for his friends. Each pizza has exactly K slices. Ram's friends get sad if one gets more slices than the other. Also, Ram gets sad if there are some pizza slices left. More formally, suppose Ram buys P pizzas, then everyone is happy if and only if there is a way to distribute K⋅P slices between N friends.</p>
+                    <p class="text-lg">You need to find the minimum number of pizzas Ram has to buy to share all the slices among his friends so that none of his friends gets sad. Note that Ram hates pizza and doesn't take any slices.</p>
+                </div>
+                <div class="mt-3">
+                    <h1 class="font-semibold text-xl">Input Format</h1>
+                    <ul class="list-disc mt-2 ml-5 text-lg">
+                        <li>First line of input contains T, the number of test cases. Then the test cases follow.</li>
+                        <li>Each test case contains two space-separated integers N and K, where N is the number of friends of Ram and K is the number of slices in a pizza.</li>
+                    </ul>
+                </div>
+                <div class="mt-3 text-xl">
+                    <h1 class="font-semibold">Output Format</h1>
+                    <p class="textlg">For each testcase, print the minimum number of pizzas Ram has to buy to share among his friends so that none of his friends gets sad.</p>
+
+                </div>
+                <div class="mt-3">
+                    <h1 class="text-xl font-semibold">Constraints</h1>
+                    <ul class="list-disc ml-5 text-lg">
+                        <li>1 ≤ T ≤ 2*10<sup>5</sup></li>
+                        <li>1 ≤ N,K ≤ 10<sup>9</sup></li>
+                        <li>The sum of N over all test cases does not exceed 2*10<sup>5</sup></li>
+                    </ul>
+                </div>
+                <ul class="text-xl font-semibold list-disc mt-3">Subtasks
+                    <li class="text-lg font-normal ml-5">Subtask 1 (100 points): Original constraints</li>
+                </ul>
+                <h1 class="mt-3 text-xl font-semibold">Sample 1:</h1>
+                <table>
+                    <tr>
+                        <th>Input</th>
+                        <th>Output</th>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>2 2</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>2 3</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>4 2</td>
+                        <td></td>
+                    </tr>
+                </table>
+                <div class="mt-3">
+                    <h1 class="text-xl font-semibold">Explanation:</h1>
+                    <ul class="list-disc text-lg">
+                        <li>Test case 1: One pizza has 2 slices. And there are 2 friends. So Ram can just buy one pizza and give one slice to one friend and another slice to another friend.</li>
+                        <li>Test case 2: One pizza has 3 slices. And there are 2 friends. So Ram can't share one pizza without being left out with a slice. So he needs to buy at least 2 pizzas. And if he buys 2 pizzas, he can give 3 slices to one friend and 3 to another. So the minimum number of pizzas Ram needs to buy is equal to 2.</li>
+                        <li>Test case 3: One pizza has 2 slices. And there are 4 friends. So Ram can't share one pizza among the 4 friends. So he needs to buy at least 2 pizzas. And if he buys 2 pizzas, he can give 1 slice to each of his friends. So the minimum number of pizzas Ram needs to buy is equal to 2.</li>
+                    </ul>
+                </div>
+                <div class="mt-3">
+                    <table>
+                        <tr>
+                            <th>Accepted</th>
+                            <th>Submissions</th>
+                            <th>Accuracy</th>
+                        </tr>
+                        <tr>
+                            <td>3563</td>
+                            <td>12484</td>
+                            <td>31.62</td>
+                        </tr>
+                    </table>
+                </div>
+
+            </div>
+            
+
+
+
+            <div class="text-center mt-10 text-lg font-bold text-amber-600">
+                © 2023 ALGO ARENA
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html>

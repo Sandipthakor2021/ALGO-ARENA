@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algo Arena</title>
+    <link rel="stylesheet" href="main.css">
+    <style>
+        .navbar li{
+            position: relative;
+        }
+        .navbar li a{
+            color: #1a1a1a;
+            transition: 0.3s ease;
+        }
+        .navbar li a:hover,
+        .navbar li a.active{
+            color: #088178 ;
+        }
+        .navbar li a.active::after,
+        .navbar li a:hover::after{
+            content: "";
+            width: 100%;
+            height: 2px;
+            background: #088178;
+            position: absolute;
+            bottom: -4px;
+            left: 0px;
+        }
+        table{  
+            border-collapse: collapse;  
+            width: 100%;   
+        }  
+        th,td{  
+            border: 2px solid green;   
+            padding: 15px;  
+            text-align: center;
+        }
+    </style>  
+</head>
+<body>
+    <div class="">
+        <div class="max-w-[1200px] mx-auto h-full">
+            <div class="flex flex-row gap-2 max-w-[1172] mx-auto mt-4">
+                <a class="text-green-800 text-4xl ml-2 mt-2 font-bold" href="/">ALGO ARENA</a>
+                <img src="./logo.jpeg" height="50px" width="60px" alt="" style="vertical-align: middle;">
+              </div>
+
+            <div class="flex justify-between items-center border border-gray-300 p-1 rounded-md mt-5 pl-4 pr-4 h-12">
+                <ul class="flex justify-start gap-12 navbar">
+                    <li>
+                        <a class="font-bold  text-indigo-500 " href="/">HOME</a>
+                    </li>
+                    <li>
+                        <a class="font-bold active text-indigo-500 " href="/problemset.html">PROBLEMSET</a>
+                    </li>
+                </ul>
+                
+                
+            </div>
+
+            <div class="flex flex-row justify-center gap-8 rounded-md mt-5 border">
+                <a class="font-bold text-indigo-500 hover:text-red-600" href="/problemset.html">PROBLEMS</a>
+                <a class="font-bold text-indigo-500 hover:text-red-600" href="http://127.0.0.1:8000/">SUBMIT</a>
+            </div>
+            
+            <table class="mt-10">
+                <tr>
+                    <th>Name</th>
+                    <th>Code</th>
+                    <th>Successful Submissions</th>
+                    <th>Accuracy</th>
+                </tr>
+                <tr>
+                    <td><a class="hover:underline" href="/question1.html">Make it Divisible</a></td>
+                    <td><a class="hover:underline" href="/question1.html">MAKEDIV3</a></td>
+                    <td>4427</td>
+                    <td>64.21</td>
+                </tr>
+                <tr>
+                    <td><a class="hover:underline" href="/question2.html">Indivisible Permutation</a></td>
+                    <td><a class="hover:underline" href="/question2.html">INDIPERM</a></td>
+                    <td>3563</td>
+                    <td>31.62</td>
+                </tr>
+                <tr>
+                    <td><a class="hover:underline" href="/question3.html">Minimum Number of Pizzas</a></td>
+                    <td><a class="hover:underline" href="/question3.html">MINPIZZAS</a></td>
+                    <td>3367</td>
+                    <td>53.44</td>
+                </tr>
+                <tr>
+                    <td><a class="hover:underline" href="/question4.html">Distinct Pair Sums</a></td>
+                    <td><a class="hover:underline" href="/question4.html">MANYSUMS</a></td>
+                    <td>2971</td>
+                    <td>53.55</td>
+                </tr>
+                <tr>
+                    <td><a class="hover:underline" href="/question5.html">Turn It</a></td>
+                    <td><a class="hover:underline" href="/question5.html">NFS</a></td>
+                    <td>2685</td>
+                    <td>49.1</td>
+                </tr>
+            </table>
+
+            <div class="text-center mt-10 text-lg font-bold text-amber-600">
+                © 2023 ALGO ARENA
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html>

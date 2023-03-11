@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algo Arena</title>
+    <link rel="stylesheet" href="main.css">
+    <style>
+        .navbar li{
+            position: relative;
+        }
+        .navbar li a{
+            color: #1a1a1a;
+            transition: 0.3s ease;
+        }
+        .navbar li a:hover,
+        .navbar li a.active{
+            color: #088178 ;
+        }
+        .navbar li a.active::after,
+        .navbar li a:hover::after{
+            content: "";
+            width: 100%;
+            height: 2px;
+            background: #088178;
+            position: absolute;
+            bottom: -4px;
+            left: 0px;
+        }
+        table{
+            border-collapse: collapse;
+            width: 50%;
+        }
+        th,td{
+            border: 2px solid green;   
+            padding: 15px;  
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="">
+        <div class="max-w-[1200px] mx-auto h-full">
+            <div class="flex flex-row gap-2 max-w-[1172] mx-auto mt-4">
+                <a class="text-green-800 text-4xl ml-2 mt-2 font-bold" href="/">ALGO ARENA</a>
+                <img src="./logo.jpeg" height="50px" width="60px" alt="" style="vertical-align: middle;">
+              </div>
+
+              <div class="flex flex-row justify-center gap-8 rounded-md mt-5 border">
+                <a class="font-bold text-indigo-500 hover:text-red-600" href="/problemset.html">PROBLEMS</a>
+                <a class="font-bold text-indigo-500 hover:text-red-600" href="http://127.0.0.1:8000/">SUBMIT</a>
+            </div>
+
+            <div class="mt-4 max-w-[850px] mx-auto">
+                <div class="flex flex-col">
+                  <br>  <h1 class="text-4xl font-bold text-center" style="font-family: 'Courier New', monospace;">Turn It</h1> <br>
+                    <p class="text-lg">Ram is playing Need For Speed. Currently, his car is running on a straight road with a velocity U metres per second and approaching a 90<sup>o</sup> turn which is S metres away from him. To successfully cross the turn, velocity of the car when entering the turn must not exceed V metres per second.</p>
+                    <p class="text-lg">The brakes of Ram's car allow him to slow down with a deceleration (negative acceleration) not exceeding A metres per squared second. Tell him whether he can cross the turn successfully. The velocity v when entering the turn can be determined from Newton's 2nd law to be v<sup>2</sup> = u<sup>2</sup>+2⋅a⋅S if the car is moving with a uniform acceleration a.</p>
+                </div>
+                <div class="mt-3">
+                    <h1 class="font-semibold text-xl">Input Format</h1>
+                    <ul class="list-disc mt-2 ml-5 text-lg">
+                        <li>First line of input contains a single integer T denoting number of test cases. The description of T test cases follows.</li>
+                        <li>The first and only line of each test case contains four space-separated integers U, V, A and R.</li>
+                    </ul>
+                </div>
+                <div class="mt-3 text-xl">
+                    <h1 class="font-semibold">Output Format</h1>
+                    <p class="text-lg">For each test case, print a single line containing the string "Yes" if Ram can cross the turn successfully or "No" if he cannot (without quotes).</p>
+                    <p class="text-lg">You may print each character of each string in uppercase or lowercase (for example, the strings "yEs", "yes", "Yes" and "YES" will all be treated as identical).</p>
+
+                </div>
+                <div class="mt-3">
+                    <h1 class="text-xl font-semibold">Constraints</h1>
+                    <ul class="list-disc ml-5 text-lg">
+                        <li>1 ≤ T ≤ 10<sup>5</sup></li>
+                        <li>1 ≤ U,V,A,S ≤ 10<sup>4</sup></li>
+                        <li>The sum of N over all test cases does not exceed 2*10<sup>5</sup></li>
+                    </ul>
+                </div>
+                <ul class="text-xl font-semibold list-disc mt-3">Subtasks
+                    <li class="text-lg font-normal ml-5">Subtask #1 (100 points): Original constraints</li>
+                </ul>
+                <h1 class="mt-3 text-xl font-semibold">Sample 1:</h1>
+                <table>
+                    <tr>
+                        <th>Input</th>
+                        <th>Output</th>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Yes</td>
+                    </tr>
+                    <tr>
+                        <td>1 1 1 1</td>
+                        <td>No</td>
+                    </tr>
+                    <tr>
+                        <td>2 1 1 1</td>
+                        <td>Yes</td>
+                    </tr>
+                    <tr>
+                        <td>2 2 1 1</td>
+                        <td></td>
+                    </tr>
+                </table>
+                <div class="mt-3">
+                    <h1 class="text-xl font-semibold">Explanation:</h1>
+                    <p class="text-lg">Example case 1: Since U=V=1, Ram does not need to brake and will be able to turn successfully.</p>
+                    <p class="text-lg">Example case 2: The smallest velocity Ram's car can have even with the maximum deceleration is &#8730;2⋅2−2⋅1⋅1= &#8730;2, which is greater than the maximum allowed velocity for a safe turn.</p>
+                    <p class="text-lg">Example case 3: The smallest velocity Ram's car can have with the maximum deceleration is again &#8730;2, which is smaller than the maximum allowed velocity for a safe turn.</p>
+                </div>
+                <div class="mt-3">
+                    <table>
+                        <tr>
+                            <th>Accepted</th>
+                            <th>Submissions</th>
+                            <th>Accuracy</th>
+                        </tr>
+                        <tr>
+                            <td>2972</td>
+                            <td>5961</td>
+                            <td>53.53</td>
+                        </tr>
+                    </table>
+                </div>
+
+            </div>
+            
+
+
+
+            <div class="text-center mt-10 text-lg font-bold text-amber-600">
+                © 2023 ALGO ARENA
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html>
